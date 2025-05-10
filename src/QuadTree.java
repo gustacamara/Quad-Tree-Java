@@ -29,17 +29,19 @@ public class QuadTree {
         Rectangle ne = new Rectangle(x+w/2, y+h/2, newWith, newHeight);
         northeast = new QuadTree(ne, capacity);
 
-        Rectangle nw = new Rectangle( x-w/2, y-h/2, newWith, newHeight);
+        Rectangle nw = new Rectangle( x-w/2, y+h/2, newWith, newHeight);
         northwest = new QuadTree(nw, capacity);
 
         Rectangle se = new Rectangle(x+w/2, y-h/2, newWith, newHeight);
         southeast = new QuadTree(se, capacity);
 
-        Rectangle sw = new Rectangle(x+w/2, y+h/2, newWith, newHeight);
+        Rectangle sw = new Rectangle(x-w/2, y-h/2, newWith, newHeight);
         southwest = new QuadTree(sw, capacity);
 
         divided = true;
     }
+
+
 
 
 }
